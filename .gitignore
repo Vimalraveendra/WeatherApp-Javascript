@@ -1,0 +1,6 @@
+##visulastudiocode##
+.vscode/
+.vscode/settings.json/
+
+##env###
+.env
