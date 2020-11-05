@@ -7,7 +7,7 @@ const formEle =document.getElementById('form');
 const searchEle = document.getElementById('search')
 
 
-
+// fetching weather by location
 async function getWeatherByLocation(city){
   try{
   const response = await fetch(`https://api.openweathermap.org/data/2.5/weather?q=${city}&appid=${API_KEY}&units=metric`)
@@ -20,6 +20,7 @@ async function getWeatherByLocation(city){
   }
 }
 
+// creating new element container
 function addWeatherDetails(data){
   const weather  = document.createElement('div')
   weather.classList.add('weather')
@@ -43,6 +44,7 @@ function addWeatherDetails(data){
   mainEle.appendChild(weather)
 }
 
+// after typing the search value keypress enter
 function searchWeather(e){
    e.preventDefault();
    const city = searchEle.value; 
